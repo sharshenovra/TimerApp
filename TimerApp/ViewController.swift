@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         view.layer.cornerRadius = 20
         view.setTitle("СТАРТ", for: .normal)
         view.addTarget(nil, action: #selector(timerStarted), for: .touchUpInside)
-        view.setTitleColor(.black, for: .normal)
+        view.setTitleColor(.white, for: .normal)
         view.backgroundColor = .systemGray6
         return view
     }()
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         view.layer.cornerRadius = 20
         view.setTitle("СТОП", for: .normal)
         view.addTarget(nil, action: #selector(timerStopped), for: .touchUpInside)
-        view.setTitleColor(.black, for: .normal)
+        view.setTitleColor(.white, for: .normal)
         view.backgroundColor = .systemGray6
         return view
     }()
@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         view.layer.cornerRadius = 20
         view.numberOfLines = 0
         view.textAlignment = .center
+        view.textColor = .black
         return view
     }()
     
@@ -156,7 +157,7 @@ class ViewController: UIViewController {
         var minutes = second / 60
         var hours = minutes / 60
         
-        timerLabel.text = "Осталось \(hours) часов \(minutes - (hours * 60)) минут и \(second - (minutes * 60)) секунд"
+        timerLabel.text = "Осталось: \n \(hours) часов \n \(minutes - (hours * 60)) минут \n \(second - (minutes * 60)) секунд"
     }
     
     @objc func timerStarted(){
