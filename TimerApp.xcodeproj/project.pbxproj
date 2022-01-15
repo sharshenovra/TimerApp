@@ -13,9 +13,11 @@
 		602C467A27930E1300A213A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602C467827930E1300A213A8 /* Main.storyboard */; };
 		602C467C27930E1400A213A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602C467B27930E1400A213A8 /* Assets.xcassets */; };
 		602C467F27930E1400A213A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602C467D27930E1400A213A8 /* LaunchScreen.storyboard */; };
+		BDD59C2C51AFB5ED6319F3A3 /* Pods_TimerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA9B6406DD760E138D99398 /* Pods_TimerApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A2595D9A96A91B821372163 /* Pods-TimerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerApp.debug.xcconfig"; path = "Target Support Files/Pods-TimerApp/Pods-TimerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		602C466F27930E1300A213A8 /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		602C467227930E1300A213A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		602C467427930E1300A213A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		602C467B27930E1400A213A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602C467E27930E1400A213A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602C468027930E1400A213A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA9B6406DD760E138D99398 /* Pods_TimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C05673E16CCC79638C8AA2 /* Pods-TimerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerApp.release.xcconfig"; path = "Target Support Files/Pods-TimerApp/Pods-TimerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD59C2C51AFB5ED6319F3A3 /* Pods_TimerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47EE7A5778B7C53CF8E63280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFA9B6406DD760E138D99398 /* Pods_TimerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		602C466627930E1300A213A8 = {
 			isa = PBXGroup;
 			children = (
 				602C467127930E1300A213A8 /* TimerApp */,
 				602C467027930E1300A213A8 /* Products */,
+				A8BAF63EF4638FC0890953EA /* Pods */,
+				47EE7A5778B7C53CF8E63280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = TimerApp;
 			sourceTree = "<group>";
 		};
+		A8BAF63EF4638FC0890953EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A2595D9A96A91B821372163 /* Pods-TimerApp.debug.xcconfig */,
+				B8C05673E16CCC79638C8AA2 /* Pods-TimerApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 602C468327930E1400A213A8 /* Build configuration list for PBXNativeTarget "TimerApp" */;
 			buildPhases = (
+				E594E99BD006A0D8C9F4D142 /* [CP] Check Pods Manifest.lock */,
 				602C466B27930E1300A213A8 /* Sources */,
 				602C466C27930E1300A213A8 /* Frameworks */,
 				602C466D27930E1300A213A8 /* Resources */,
+				BF349D9907E0461D5F99F50E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF349D9907E0461D5F99F50E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimerApp/Pods-TimerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimerApp/Pods-TimerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimerApp/Pods-TimerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E594E99BD006A0D8C9F4D142 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		602C466B27930E1300A213A8 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		602C468427930E1400A213A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2595D9A96A91B821372163 /* Pods-TimerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		602C468527930E1400A213A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C05673E16CCC79638C8AA2 /* Pods-TimerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
